@@ -64,7 +64,7 @@ class TTexts {
   static const String changeYourPasswordSubTitle =
       "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
   static const String confirmEmailTitle = "Verify your email address!";
-  static const String confirmEmail = "hmdy7486@gmail.com";
+  static const String confirmEmail = "ntupro@gmail.com";
   static const String confirmEmailSubTitle =
       "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
   static const String emailNotReceivedMessage =
@@ -82,7 +82,7 @@ class TTexts {
   static const String homeAppbarSubTitle = "Mahmoud Hamdy";
   static const String searchContainer = "Search in Store";
   static const String popularCategories = "Popular Categories";
-// -- Categories
+  // -- Categories
   static const String sport = "Sport";
   static const String cloth = "Cloth";
   static const String shoes = "Shoes";
@@ -93,7 +93,7 @@ class TTexts {
   static const String accessories = "Accessories";
   static const String electronics = "Electronics";
   static const String jewellers = "Jewellers";
-//list of categories
+  //list of categories
   static const List<String> categories = [
     "beauty",
     "fragrances",
@@ -118,7 +118,7 @@ class TTexts {
     "womens-dresses",
     "womens-jewellery",
     "womens-shoes",
-    "womens-watches"
+    "womens-watches",
   ];
   static const String applePay = 'Apple Pay';
   static const String googlePay = 'Google Pay';
