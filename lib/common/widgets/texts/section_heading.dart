@@ -5,7 +5,7 @@ class TSectionHeading extends StatelessWidget {
     super.key,
     this.textColor,
     required this.title,
-    required this.showActionButton,
+    this.showActionButton = true,
     this.buttonTitle = 'View all',
     this.onPressed,
   });
@@ -18,6 +18,7 @@ class TSectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
