@@ -16,7 +16,10 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
-        title: Text('Profile', style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.black)),
+        title: Text(
+          'Profile',
+          style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.black),
+        ),
       ),
 
       /// -- Body
@@ -53,7 +56,12 @@ class ProfileScreen extends StatelessWidget {
               TSectionHeading(title: 'Profile Information', showActionButton: false),
               const SizedBox(height: TSizes.spaceBtwItems),
 
-              TProfileMenu(title: 'User ID', value: '45678', icon: Iconsax.copy_copy, onPressed: () {}),
+              TProfileMenu(
+                title: 'User ID',
+                value: '45678',
+                icon: Iconsax.copy_copy,
+                onPressed: () {},
+              ),
               TProfileMenu(title: 'E-mail', value: 'coding_with_t', onPressed: () {}),
               TProfileMenu(title: 'Phone Number', value: '+92-317-8059528', onPressed: () {}),
               TProfileMenu(title: 'Gender', value: 'Male', onPressed: () {}),
