@@ -6,10 +6,12 @@ import 'package:t_store/common/widgets/custom_shapes/containers/search_container
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/shop/screens/brand/all_brands.dart';
 import 'package:t_store/features/shop/screens/store/widget/category_tab.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:get/get.dart';
 
 class Store extends StatelessWidget {
   const Store({super.key});
@@ -30,7 +32,8 @@ class Store extends StatelessWidget {
                 automaticallyImplyLeading: false,
                 pinned: true,
                 floating: true,
-                backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white,
+                backgroundColor:
+                    THelperFunctions.isDarkMode(context) ? TColors.black : TColors.white,
                 expandedHeight: 440,
                 flexibleSpace: Padding(
                   padding: EdgeInsets.all(TSizes.defaultSpace),
@@ -49,7 +52,11 @@ class Store extends StatelessWidget {
                       const SizedBox(height: TSizes.spaceBtwSections),
 
                       /// --- Featured Brands ---
-                      TSectionHeading(title: 'Featured Brands', showActionButton: true, onPressed: () {}),
+                      TSectionHeading(
+                        title: 'Featured Brands',
+                        showActionButton: true,
+                        onPressed: () => Get.to(() => const AllBrandsScreen()),
+                      ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
                       TGridLayout(
@@ -78,7 +85,15 @@ class Store extends StatelessWidget {
           },
 
           /// BODY
-          body: TabBarView(children: [TCategoryTab(), TCategoryTab(), TCategoryTab(), TCategoryTab(), TCategoryTab()]),
+          body: TabBarView(
+            children: [
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+              TCategoryTab(),
+            ],
+          ),
         ),
       ),
     );
