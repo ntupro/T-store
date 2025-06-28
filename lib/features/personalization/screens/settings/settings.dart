@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
+import 'package:t_store/features/shop/screens/order/order.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:get/get.dart';
@@ -28,7 +29,9 @@ class SettingsScreen extends StatelessWidget {
                   TAppBar(
                     title: Text(
                       'Account',
-                      style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.headlineMedium!.apply(color: TColors.white),
                     ),
                   ),
 
@@ -63,7 +66,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress & completed orders',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
 
                   const TSettingsMenuTile(
