@@ -4,11 +4,13 @@ import 'package:t_store/common/widgets/custom_shapes/containers/search_container
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/product_cards/product_card_vertical.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/shop/screens/all_products/all_products.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -36,10 +38,7 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
-                        TSectionHeading(
-                          title: 'Popular Categories',
-                          showActionButton: false,
-                        ),
+                        TSectionHeading(title: 'Popular Categories', showActionButton: false),
                         const SizedBox(height: TSizes.spaceBtwSections),
 
                         /// Categories
@@ -60,16 +59,15 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   /// -- Promo Slider --
                   TPromoSlider(
-                    banners: [
-                      TImages.promoBanner1,
-                      TImages.promoBanner2,
-                      TImages.promoBanner3,
-                    ],
+                    banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// --- Heading ---
-                  TSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  TSectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () => Get.to(() => const AllProducts()),
+                  ),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   /// --- Popular Products ---
